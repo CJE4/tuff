@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TUFF Bot Services | Custom Discord Bots</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-color: #3498db;
+      --background: #0e0e10;
+      --section-bg: #1a1a1d;
+      --accent: #58c4fa;
+      --text-color: #ffffff;
+      --font-main: 'Poppins', sans-serif;
+    }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text-color);
+      font-family: var(--font-main);
+      scroll-behavior: smooth;
+    }
+    /* Header */
+    header {
+      background: url('https://cdn.discordapp.com/attachments/1360064099072872594/1366228929039302716/tuff_bot_banner.png?ex=68102f57&is=680eddd7&hm=ddf3108ef542495053c1727e35a339c220dceedd26b3db94a09ecfa1865b8b0a&') no-repeat center center/cover;
+      color: #ffffff;
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+    }
+    header h1 {
+      font-size: 3.5em;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+    header img {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 80px;
+      height: auto;
+    }
+    /* Tabs */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .tabs a {
+      text-decoration: none;
+      padding: 15px 30px;
+      background-color: var(--section-bg);
+      color: var(--text-color);
+      border-radius: 5px;
+      margin: 0 10px;
+      font-weight: bold;
+      transition: background 0.3s;
+      margin-top: 20px;
+    }
+    .tabs a:hover {
+      background-color: var(--main-color);
+    }
+    .tab-content {
+      display: none;
+      padding: 40px;
+      background-color: var(--section-bg);
+      border-radius: 12px;
+      margin-top: 40px;
+    }
+    .active-tab {
+      display: block;
+    }
+    /* Buttons */
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      background-color: #ffffff;
+      color: var(--main-color);
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, color 0.3s;
+    }
+    .button:hover {
+      background-color: var(--accent);
+      color: #ffffff;
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #aaa;
+      margin-top: 40px;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5em;
+      }
+      header p {
+        font-size: 1.2em;
+      }
+      .tabs {
+        flex-direction: column;
+        align-items: center;
+      }
+      .tabs a {
+        margin: 10px 0;
+      }
+      .tab-content {
+        padding: 20px;
+      }
+    }
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2em;
+      }
+      header p {
+        font-size: 1em;
+      }
+      .button {
+        padding: 12px 24px;
+      }
+    }
+  </style>
+  <script>
+    function switchTab(tabId) {
+      // Hide all tab contents
+      let tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => tab.classList.remove('active-tab'));
+
+      // Show the selected tab
+      document.getElementById(tabId).classList.add('active-tab');
+    }
+  </script>
+</head>
+<body>
+
+<header>
+  <img src="https://cdn.discordapp.com/attachments/1360064099072872594/1366228857601917098/tuff_logo-removebg-preview.png?ex=68102f46&is=680eddc6&hm=8c65c0d6d37088ec840fdd5cc5c7a7b6dad5aa06cf7258378c7f185e5574d76b&" alt="TUFF Bot Services Logo">
+  <h1>🚀 TUFF Bot Services</h1>
+  <p>Custom Discord Bots • Built Fast. Built Right.</p>
+  <a href="https://tuffbot.mysellauth.com/" class="button">Get Your Bot Now</a>
+</header>
+
+<div class="tabs">
+  <a href="javascript:void(0);" onclick="switchTab('about')">About Us</a>
+  <a href="javascript:void(0);" onclick="switchTab('services')">What We Offer</a>
+  <a href="javascript:void(0);" onclick="switchTab('pricing')">Pricing</a>
+  <a href="javascript:void(0);" onclick="switchTab('faq')">FAQ</a>
+  <a href="javascript:void(0);" onclick="switchTab('contact')">Contact</a>
+</div>
+
+<!-- Tab Contents -->
+<div id="about" class="tab-content active-tab">
+  <h2>About Us</h2>
+  <p>At <strong>TUFF Bot Services</strong>, we craft powerful, custom Discord bots that help your server stand out. Whether you need moderation tools, review systems, giveaway systems, ticket systems, or fully custom bots — we deliver instantly, reliable, and fully supported bots created exactly for you.</p>
+</div>
+
+<div id="services" class="tab-content">
+  <h2>What We Offer</h2>
+  <ul>
+    <li>✅ Fully Custom Bots</li>
+    <p>- Giveaway Bots<p>
+    <p>- Review Bots <p>
+    <p>- Verification Bots<p>
+    <p>- All In 1 Bots<p>
+    <li>✅ Setup, Hosting, and Support</li>
+    <li>✅ Instant Delivery</li>
+    <li>✅ Free Trials Before You Buy</li>
+    <li>✅ Cheap Prices</li>
+    <li>✅ Lifetime Bots</li>
+  </ul>
+</div>
+
+<div id="Website" class="tab-content">
+  <h2>TUFF Website</h2>
+  <p>See all of our prices and producsts here!</p>
+  <a href="https://tuffbot.mysellauth.com/" class="button">View Website</a>
+</div>
+
+<div id="pricing" class="tab-content">
+  <h2>Pricing</h2>
+  <ul>
+    <img src="https://cdn.discordapp.com/attachments/1360064099072872594/1366232530906517604/image.png?ex=681032b2&is=680ee132&hm=b48b01c68edb0359a3d14462df62b30f395d7ec3816a4eb775d2aeea5796310a&">
+  </ul>
+</div>
+
+<div id="faq" class="tab-content">
+  <h2>FAQ</h2>
+  <p><strong>How long does my bot take?</strong><br>Instant Delivery!</p>
+  <p><strong>When can i start to use the bot?</strong><br>Within 24 hours of buying!</p>
+  <p><strong>Can I get updates after purchase?</strong><br>Yes — small updates are free for 30 days.</p>
+</div>
+
+<div id="contact" class="tab-content">
+  <h2>Contact Us</h2>
+  <p>Have questions or need help? Join our Discord!</p>
+  <a href="https://discord.gg/wtG3etZK" class="button">Join Our Discord</a>
+</div>
+
+<footer>
+  © 2025 TUFF Bot Services • Built for You, Powered by TUFF
+</footer>
+
+</body>
+</html>
