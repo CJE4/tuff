@@ -21,7 +21,6 @@
       font-family: var(--font-main);
       scroll-behavior: smooth;
     }
-    /* Header */
     header {
       background: url('https://cdn.discordapp.com/attachments/1360064099072872594/1366228929039302716/tuff_bot_banner.png?ex=68102f57&is=680eddd7&hm=ddf3108ef542495053c1727e35a339c220dceedd26b3db94a09ecfa1865b8b0a&') no-repeat center center/cover;
       color: #ffffff;
@@ -44,7 +43,6 @@
       width: 80px;
       height: auto;
     }
-    /* Tabs */
     .tabs {
       display: flex;
       justify-content: center;
@@ -75,7 +73,6 @@
     .active-tab {
       display: block;
     }
-    /* Buttons */
     .button {
       display: inline-block;
       margin-top: 30px;
@@ -92,7 +89,6 @@
       background-color: var(--accent);
       color: #ffffff;
     }
-    /* Footer */
     footer {
       text-align: center;
       padding: 20px;
@@ -100,8 +96,6 @@
       color: #aaa;
       margin-top: 40px;
     }
-
-    /* Mobile responsiveness */
     @media (max-width: 768px) {
       header h1 {
         font-size: 2.5em;
@@ -134,11 +128,8 @@
   </style>
   <script>
     function switchTab(tabId) {
-      // Hide all tab contents
       let tabs = document.querySelectorAll('.tab-content');
       tabs.forEach(tab => tab.classList.remove('active-tab'));
-
-      // Show the selected tab
       document.getElementById(tabId).classList.add('active-tab');
     }
   </script>
@@ -155,12 +146,12 @@
 <div class="tabs">
   <a href="javascript:void(0);" onclick="switchTab('about')">About Us</a>
   <a href="javascript:void(0);" onclick="switchTab('services')">What We Offer</a>
-  <a href="javascript:void(0);" onclick="switchTab('pricing')">Pricing</a>
+  <a href="javascript:void(0);" onclick="switchTab('freebot')">Free Bots</a>
+  <a href="javascript:void(0);" onclick="switchTab('Free Vs Custom')">Free Vs Custom</a>
   <a href="javascript:void(0);" onclick="switchTab('faq')">FAQ</a>
   <a href="javascript:void(0);" onclick="switchTab('contact')">Contact</a>
 </div>
 
-<!-- Tab Contents -->
 <div id="about" class="tab-content active-tab">
   <h2>About Us</h2>
   <p>At <strong>TUFF Bot Services</strong>, we craft powerful, custom Discord bots that help your server stand out. Whether you need moderation tools, review systems, giveaway systems, ticket systems, or fully custom bots — we deliver instantly, reliable, and fully supported bots created exactly for you.</p>
@@ -170,10 +161,10 @@
   <h2>What We Offer</h2>
   <ul>
     <li>✅ Fully Custom Bots</li>
-    <p>- Giveaway Bots<p>
-    <p>- Review Bots <p>
-    <p>- Verification Bots<p>
-    <p>- All In 1 Bots<p>
+    <p>- Giveaway Bots</p>
+    <p>- Review Bots</p>
+    <p>- Verification Bots</p>
+    <p>- All In 1 Bots</p>
     <li>✅ Setup, Hosting, and Support</li>
     <li>✅ Instant Delivery</li>
     <li>✅ Free Trials Before You Buy</li>
@@ -182,23 +173,252 @@
   </ul>
 </div>
 
-<div id="Website" class="tab-content">
-  <h2>TUFF Website</h2>
-  <p>See all of our prices and producsts here!</p>
-  <a href="https://tuffbot.mysellauth.com/" class="button">View Website</a>
+<div id="freebot" class="tab-content">
+  <h2>Free TUFF Bots</h2>
+  <p>We now offer completely <strong>free TUFF-branded bots</strong> for your server. Perfect for testing or if you're just starting out!</p>
+  <ul>
+    <li>✨ Giveaway Bot</li>
+    <li>✨ Review Bot</li>
+    <li>✨ Moderation and Ticket Bot</li>
+  </ul>
+
+  <h2>Free TUFF Bots — No Risk, All Value</h2>
+<p>Get started with a <strong>free TUFF-branded bot</strong> today! Perfect for small servers or testing before buying.</p>
+
+<ul>
+  <li>✅ Instant setup</li>
+  <li>✅ TUFF branding & presence</li>
+  <li>✅ Core features included (tickets, giveaways, etc.)</li>
+  <li>🔓 Upgrade anytime to unlock full customization</li>
+</ul>
+
+<p>Want your own logo, presence, name, and features? Upgrade to a <strong>custom version</strong> built just for your server.</p>
+
+  <p><strong>Note:</strong> These bots include TUFF logos and branding. Upgrade anytime to remove branding and get full custom features.</p>
+  <a href="https://tuffbot.mysellauth.com/product/free-bots" class="button">Get a Free Bot</a>
 </div>
 
-<div id="pricing" class="tab-content">
-  <h2>Pricing</h2>
+<div id="Free Vs Custom" class="tab-content">
   <ul>
-    <img src="https://cdn.discordapp.com/attachments/1360064099072872594/1366232530906517604/image.png?ex=681032b2&is=680ee132&hm=b48b01c68edb0359a3d14462df62b30f395d7ec3816a4eb775d2aeea5796310a&">
+    <style>
+        .comparison-table {
+          width: 100%;
+          max-width: 900px;
+          margin: 40px auto;
+          border-collapse: collapse;
+          font-size: 1em;
+          color: white;
+        }
+      
+        .comparison-table thead {
+          background-color: #111;
+        }
+      
+        .comparison-table th,
+        .comparison-table td {
+          padding: 16px;
+          text-align: center;
+          border-bottom: 1px solid #333;
+        }
+      
+        .comparison-table th {
+          color: #f1c40f;
+          font-weight: 700;
+        }
+      
+        .comparison-table td:first-child {
+          text-align: left;
+          font-weight: 600;
+          color: #ccc;
+        }
+      
+        .check {
+          color: #2ecc71;
+          font-weight: bold;
+        }
+      
+        .cross {
+          color: #e74c3c;
+          font-weight: bold;
+        }
+      
+        .limited {
+          color: #f39c12;
+        }
+      
+        .compare-section {
+          background-color: #1a1a1a;
+          padding: 40px 20px;
+          border-radius: 12px;
+          margin-top: 40px;
+        }
+      
+        h2, h3 {
+          text-align: center;
+          color: white;
+        }
+      
+        @media (max-width: 600px) {
+          .comparison-table td, .comparison-table th {
+            font-size: 0.9em;
+            padding: 10px;
+          }
+        }
+      </style>
+      
+      <div class="Free Vs Custom">
+        <h2>Free Vs Custom</h2>
+      
+        <!-- TUFF Bot -->
+        <h3>TUFF Moderation and Ticket Bot</h3>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Free Bot</th>
+              <th>Custom Bot</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Servers Allowed</td>
+              <td>1 Server</td>
+              <td>Unlimited</td>
+            </tr>
+           
+            <tr>
+              <td>Custom Status</td>
+              <td class="cross">✗</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+                <td>Admin Panel</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+              </tr>
+              <tr>
+                <td>Ticket System</td>
+                <td class="check">✓</td>
+                <td class="check">✓</td>
+              </tr>
+              <tr>
+            <tr>
+              <td>Custom Bot Name & Logo</td>
+              <td class="cross">✗</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td>Bot Branding</td>
+              <td>TUFF Branding</td>
+              <td>Removed</td>
+            </tr>
+            <tr>
+              <td>Priority Support</td>
+              <td class="cross">✗</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td>Custom Status</td>
+              <td class="cross">✗</td>
+              <td class="check">✓</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      
+        <!-- Giveaway Bot -->
+        <h3> TUFF Giveaway Bot</h3>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Free Version</th>
+              <th>Custom Version</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Number of Giveaways</td>
+              <td class="limited">1 at a time</td>
+              <td>Unlimited</td>
+            </tr>
+            <td>Auto Ticket with winner</td>
+                <td class="check">✓</td>
+                <td class="check">✓ (With Transcript logs)</td>
+              </tr>
+            <tr>
+            <tr>
+              <td>Duration Options</td>
+              <td class="Duration">1-7 days</td>
+              <td>Custom Time</td>
+            </tr>
+            <tr>
+              <td>Custom Embed Design</td>
+              <td class="cross">✗</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td>Kick Users</td>
+              <td class="cross">✗</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td>Reroll</td>
+              <td class="cross">✗</td>
+              <td class="check">✓</td>
+            </tr>
+          </tbody>
+        </table>
+      
+        <!-- Review Bot -->
+        <h3>  TUFF Review Bot</h3>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Free Version</th>
+              <th>Custom Version</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Review Collection</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+                <td>Custom Footer</td>
+                <td class="cross">✗</td>
+                <td class="check">✓</td>
+              </tr>
+            <tr>
+              <td>Star Rating System</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td>Review Description</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td>Custom Branding</td>
+              <td>TUFF Logo</td>
+              <td>Your Logo</td>
+            </tr>
+        
+          </tbody>
+        </table>
+      </div>
+      
   </ul>
 </div>
 
 <div id="faq" class="tab-content">
   <h2>FAQ</h2>
   <p><strong>How long does my bot take?</strong><br>Instant Delivery!</p>
-  <p><strong>When can i start to use the bot?</strong><br>Within 24 hours of buying!</p>
+  <p><strong>When can I start to use the bot?</strong><br>Within 24 hours of buying!</p>
   <p><strong>Can I get updates after purchase?</strong><br>Yes — small updates are free for 30 days.</p>
 </div>
 
@@ -208,9 +428,16 @@
   <a href="https://discord.gg/wtG3etZK" class="button">Join Our Discord</a>
 </div>
 
-<footer>
-  © 2025 TUFF Bot Services • Built for You, Powered by TUFF
-</footer>
-
+<footer onclick="openBothLinks()" style="cursor: pointer;">
+    © 2025 TUFF Bot Services • Built for You, Powered by TUFF
+  </footer>
+  
+  <script>
+    function openBothLinks() {
+      window.open('https://tuffbot.mysellauth.com/terms', '_blank');
+      window.open('https://tuffbot.mysellauth.com/terms', '_blank');
+    }
+  </script>
+  
 </body>
 </html>
