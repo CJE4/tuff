@@ -22,7 +22,7 @@
       scroll-behavior: smooth;
     }
     header {
-      background: url('https://cdn.discordapp.com/attachments/1360064099072872594/1366228929039302716/tuff_bot_banner.png?ex=68102f57&is=680eddd7&hm=ddf3108ef542495053c1727e35a339c220dceedd26b3db94a09ecfa1865b8b0a&') no-repeat center center/cover;
+      background: url('https://cdn.discordapp.com/attachments/1368054604377358419/1368624569568591902/TUFF_resized_1.png?ex=6818e675&is=681794f5&hm=530cffba13e3a3634de9ee243e45485f900c6109f53696180839d70a9237aa0b&') no-repeat center center/cover;
       color: #ffffff;
       text-align: center;
       padding: 100px 20px;
@@ -149,7 +149,7 @@
   <a href="javascript:void(0);" onclick="switchTab('freebot')">Free Bots</a>
   <a href="javascript:void(0);" onclick="switchTab('Free Vs Custom')">Free Vs Custom</a>
   <a href="javascript:void(0);" onclick="switchTab('faq')">FAQ</a>
-  <a href="javascript:void(0);" onclick="switchTab('contact')">Contact</a>
+  <a href="javascript:void(0);" onclick="switchTab('support')">Support</a>
 </div>
 
 <div id="about" class="tab-content active-tab">
@@ -268,9 +268,43 @@
       
       <div class="Free Vs Custom">
         <h2>Free Vs Custom</h2>
+        <h3>Customizations</h3>
       
         <!-- TUFF Bot -->
-        <h3>TUFF Moderation and Ticket Bot</h3>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Branding</th><!-- Customization -->
+              <th>Free Bot</th>
+              <th>Custom Bot</th>
+            </tr>
+          </thead>
+          <tr>
+              <td>Bot Branding</td>
+              <td>TUFF Branding</td>
+              <td>Custom</td>
+            </tr>
+            <tr>
+              <td>Custom Status</td>
+              <td class="cross">✗</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td>Custom Embed Design</td>
+              <td class="cross">✗</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+                <td>Custom Footer</td>
+                <td class="cross">✗</td>
+                <td class="check">✓</td>
+              </tr>
+            <tr>
+            <tbody>
+            </table>
+
+        <h3>Moderation/Support Features</h3> <!-- Moderation/supprot -->
 
         <table class="comparison-table">
           <thead>
@@ -286,15 +320,15 @@
               <td>1 Server</td>
               <td>Unlimited</td>
             </tr>
-           
             <tr>
-              <td>Custom Status</td>
-              <td class="cross">✗</td>
-              <td class="check">✓</td>
-            </tr>
-            <tr>
+            </tbody>
                 <td>Admin Panel</td>
                 <td class="check">✓</td>
+                <td class="check">✓</td>
+              </tr>
+              <tr>
+                <td>Auto Moderation</td>
+                <td class="cross">✗</td>
                 <td class="check">✓</td>
               </tr>
               <tr>
@@ -303,23 +337,24 @@
                 <td class="check">✓</td>
               </tr>
               <tr>
-            <tr>
-              <td>Custom Bot Name & Logo</td>
-              <td class="cross">✗</td>
+                <td>Ticket Categories/Forms</td>
+                <td class="cross">✗</td>
+                <td class="check">✓</td>
+              </tr>
+              <tr>
+                <tr>
+                <td>Ticket Transcripts</td>
+                <td class="cross">✗</td>
+                <td class="check">✓</td>
+              </tr>
+              <tr>
+              <td>logs</td>
+              <td class="check">✓</td>
               <td class="check">✓</td>
             </tr>
+              <tr>
             <tr>
-              <td>Bot Branding</td>
-              <td>TUFF Branding</td>
-              <td>Removed</td>
-            </tr>
-            <tr>
-              <td>Priority Support</td>
-              <td class="cross">✗</td>
-              <td class="check">✓</td>
-            </tr>
-            <tr>
-              <td>Custom Status</td>
+              <td>Welcome Message</td>
               <td class="cross">✗</td>
               <td class="check">✓</td>
             </tr>
@@ -327,8 +362,7 @@
           </tbody>
         </table>
       
-        <!-- Giveaway Bot -->
-        <h3> TUFF Giveaway Bot</h3>
+        <h3>Giveaway Feature</h3>  <!-- Giveaway -->
         <table class="comparison-table">
           <thead>
             <tr>
@@ -339,24 +373,29 @@
           </thead>
           <tbody>
             <tr>
-              <td>Number of Giveaways</td>
-              <td class="limited">1 at a time</td>
+              <td>Automatic Giveaway</td>
+              <td class="cross">✗</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td>Number of Winners</td>
+              <td class="limited">1</td>
               <td>Unlimited</td>
             </tr>
-            <td>Auto Ticket with winner</td>
+            <tr>
+              <td>Number of Giveaways (At a time)</td>
+              <td class="limited">1</td>
+              <td>1-3</td>
+            </tr>
+            <td>Auto Ticket with winner(s)</td>
                 <td class="check">✓</td>
-                <td class="check">✓ (With Transcript logs)</td>
+                <td class="check">✓</td>
               </tr>
             <tr>
             <tr>
               <td>Duration Options</td>
-              <td class="Duration">1-7 days</td>
-              <td>Custom Time</td>
-            </tr>
-            <tr>
-              <td>Custom Embed Design</td>
-              <td class="cross">✗</td>
-              <td class="check">✓</td>
+              <td class="Duration">1-7 Days</td>
+              <td>1 Day - 2 Weeks</td>
             </tr>
             <tr>
               <td>Kick Users</td>
@@ -364,15 +403,20 @@
               <td class="check">✓</td>
             </tr>
             <tr>
-              <td>Reroll</td>
+              <td>Reroll Winner</td>
               <td class="cross">✗</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td>Winner Log</td>
+              <td class="check">✓</td>
               <td class="check">✓</td>
             </tr>
           </tbody>
         </table>
       
-        <!-- Review Bot -->
-        <h3>  TUFF Review Bot</h3>
+         <!-- Review Bot -->
+        <h3>Review/Vouch Feature</h3> <!-- Review -->
         <table class="comparison-table">
           <thead>
             <tr>
@@ -383,17 +427,11 @@
           </thead>
           <tbody>
             <tr>
-              <td>Review Collection</td>
+              <td>Review Channel</td>
               <td class="check">✓</td>
               <td class="check">✓</td>
             </tr>
-            <tr>
-                <td>Custom Footer</td>
-                <td class="cross">✗</td>
-                <td class="check">✓</td>
-              </tr>
-            <tr>
-              <td>Star Rating System</td>
+              <td>Star Rating System (X/5)</td>
               <td class="check">✓</td>
               <td class="check">✓</td>
             </tr>
@@ -403,12 +441,98 @@
               <td class="check">✓</td>
             </tr>
             <tr>
-              <td>Custom Branding</td>
-              <td>TUFF Logo</td>
-              <td>Your Logo</td>
+              <td>Time Stamps</td>
+              <td class="check">✓</td>
+              <td class="check">✓</td>
+            </tr>
+            </table>
+        <h3>Verification Feature</h3> <!-- Verification -->
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Free Version</th>
+              <th>Custom Version</th>
+            </tr>
+          </thead>
+          </tbody>
+          <tr>
+              <td>Rules/Embed Verifcation Message</td>
+              <td><span class="cross">✗</span> Not Included</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td>Alt Blocker</td>
+              <td><span class="cross">✗</span> Not Included</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td>Verify Website</td>
+              <td><span class="cross">✗</span> Not Included</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td>Verification</td>
+              <td><span class="cross">✗</span> Not Included</td>
+              <td class="check">✓</td>
+            </tr>
+            </table>
+            <h3>Leveling & Economy Feature</h3> <!-- Leveling -->
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Free Version</th>
+              <th>Custom Version</th>
+            </tr>
+          </thead>
+          <tr>
+              <td>Custom Currency</td>
+              <td><span class="cross">✗</span> Not Included</td>
+              <td class="check">✓</td>
+            </tr>
+          <tr>
+              <td>XP & Ranks</td>
+              <td><span class="cross">✗</span> Not Included</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td>Leaderboards</td>
+              <td><span class="cross">✗</span> Not Included</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td>Daily Rewards/Point Shop</td>
+              <td><span class="cross">✗</span> Not Included</td>
+              <td class="check">✓</td>
+            </tr>
+            </table>
+          </tbody>
+          <h3>Fun Features</h3> <!-- Leveling -->
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Free Version</th>
+              <th>Custom Version</th>
+            </tr>
+          </thead>
+            <tr>
+              <td>Reaction Role Feature</td>
+              <td><span class="cross">✗</span> Not Included</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td>Invite Tracker</td>
+              <td><span class="cross">✗</span> Not Included</td>
+              <td class="check">✓</td>
+            </tr>
+            <tr>
+              <td>Invite Leaderboards</td>
+              <td><span class="cross">✗</span> Not Included</td>
+              <td class="check">✓</td>
             </tr>
         
-          </tbody>
         </table>
       </div>
       
@@ -422,8 +546,8 @@
   <p><strong>Can I get updates after purchase?</strong><br>Yes — small updates are free for 30 days.</p>
 </div>
 
-<div id="contact" class="tab-content">
-  <h2>Contact Us</h2>
+<div id="support" class="tab-content">
+  <h2>Support</h2>
   <p>Have questions or need help? Join our Discord!</p>
   <a href="https://discord.gg/wtG3etZK" class="button">Join Our Discord</a>
 </div>
