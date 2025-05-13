@@ -125,14 +125,48 @@
         padding: 12px 24px;
       }
     }
+    
+  .tab {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    background-color: #222;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+    transition: background 0.3s;
+  }
+
+  .tab:hover {
+    background-color: gray;
+  }
+
+  .tab.active {
+    background-color: gold;
+    color: black;
+  }
+
+
   </style>
   <script>
-    function switchTab(tabId) {
-      let tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(tab => tab.classList.remove('active-tab'));
-      document.getElementById(tabId).classList.add('active-tab');
-    }
-  </script>
+  function switchTab(tabId) {
+    // Hide all tab content sections
+    let tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => tab.style.display = 'none');
+
+    // Show selected tab content
+    const activeTab = document.getElementById(tabId);
+    if (activeTab) activeTab.style.display = 'block';
+
+    // Update tab button highlighting
+    const tabButtons = document.querySelectorAll('.tab');
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+
+    // Add active class to the clicked one
+    event.target.classList.add('active');
+  }
+</script>
+
 </head>
 <body>
 
@@ -144,13 +178,14 @@
 </header>
 
 <div class="tabs">
-  <a href="javascript:void(0);" onclick="switchTab('about')">About Us</a>
-  <a href="javascript:void(0);" onclick="switchTab('services')">What We Offer</a>
-  <a href="javascript:void(0);" onclick="switchTab('freebot')">Free Bots</a>
-  <a href="javascript:void(0);" onclick="switchTab('Free Vs Custom')">Free Vs Custom</a>
-  <a href="javascript:void(0);" onclick="switchTab('custom bot')">Custom Bot</a>
-  <a href="javascript:void(0);" onclick="switchTab('support')">Support</a>
+  <a href="javascript:void(0);" class="tab" onclick="switchTab('about')">About Us</a>
+  <a href="javascript:void(0);" class="tab" onclick="switchTab('services')">What We Offer</a>
+  <a href="javascript:void(0);" class="tab" onclick="switchTab('freebot')">Free Bots</a>
+  <a href="javascript:void(0);" class="tab" onclick="switchTab('Free Vs Custom')">Free Vs Custom</a>
+  <a href="javascript:void(0);" class="tab" onclick="switchTab('custom bot')">Custom Bot</a>
+  <a href="javascript:void(0);" class="tab" onclick="switchTab('support')">Support</a>
 </div>
+
 
 <div id="about" class="tab-content active-tab">
   <div style="font-family: Arial, sans-serif; background-color: #1e1e2f; color: #f1f1f1; padding: 20px; border-radius: 12px; max-width: 800px; margin: auto;">
